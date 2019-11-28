@@ -7,13 +7,22 @@ WK 10 writeup
   Once the setup was complete the rest of the project went rather smoothly. Setting up the MHN Admin VM as well as the Honeypot VMs. MHNs interface for creating honeypots is very efficient and easy to use. For the initial honeypot I used the recommended Dionaea honeypot. 
   I ran into an issue of the honeypot VM consistently having connection errors after about 10 minutes. In order to rectify this I recommend you set a ping for every 30 seconds in puTTys connection options. 
   Once everything was set up I started having a stream of attacks being recorded on honeypot-1. It was hardly even necessary to confirm the honeypot was configured correctly by testing it with nmap because before the scan was even done there were already attacks being recorded. In order to see how other sensors would work, I decided to deploy a “snort” sensor and a “cowrie” sensor.
+  
+  ![](wk10attacklist.png)
+  ![](wk10sensors.png)
 
   Below is a summary of the data I collected over the course of 2 days of the honeypot running
+  
 Dionaea: 1860 attacks
+
 Malware Samples: Unknown
+
 Snort: 619 attacks
+
 Cowerie: 55 attacks
+
 Most popular passwords for cowerie: nproc, admin, root222, vivelid, szchech, showalter, root777, root, 123456, windler
+![](wk10passgraph.png)
 
 The nonsensical passwords tell me that these are standard dictionary attacks being performed with generic wordlists.
 
